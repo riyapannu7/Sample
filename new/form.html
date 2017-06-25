@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Forms</title>
+</head>
+    <body>Text
+    <input type="text" required> <!--required makes the filling of this text box compulsary. it makes it a compulsary field. we must add these checks on both server side and client side. if the check is only on client and not on the server side, the user can use the inspect element option and delete "required" from the code and in the js code, just delete that portion of the code which checks the entry of the field and so the form can be submitted, as we made the field no longer compulsary. similarly, we must not have check only on the server side. client side validation is required to make the process faster.-->
+    <br>Color
+        <input type="color">
+        <br>File
+        <input type="file">
+        <br>Date
+        <input type="date">
+        <br>Meter
+        <meter value="60" min="20" max="100"></meter>
+        <br>Range
+        <input type="range">
+        <center><h1> Coding blocks form</h1></center>
+        <center>
+        <p> Courses </p>
+        <input type="radio" name="course">Elixir &nbsp;
+        <input type="radio" name="course"> Pandora &nbsp;
+        <br>
+        <p>Location </p>
+        <input type="checkbox" name="location"> Dwarka
+        <input type="checkbox" name="location"> Pitampura
+            <br>
+            Password <input type="password">
+        </center>
+        <form  method="post" action="#"> <!--The action attribute can have three kinds of values, namely, #, /search and search.
+        1. # this is for self redirection. Basically # puts the data entered into the URL. used in get request. it can be used to hack data. IT DISPLAYS ENTIRE PATH IN THE URL. it is used to redirect to the same page.-->
+            <!--file:///Users/riyapannu/Desktop/form.html?main=a+h&secondary=b# THIS IS THE RESULTANT URL IF WE HAD #-->
+        <!--2. "/search" gives me the domain name followed by /search in the URL. it is used to redirect to another pageand appends the pathafter domain.
+                
+                file:///search?main=a&secondary=b
+
+            3."search" redirects to new page and appends the whole path from the route folder.
+                file:///Users/riyapannu/Desktop/search?main=a&secondary=b
+            if i write search, it returns whole address, entire path from the parent onwards.
+            if i write search/folder1, it will return the address from folder1 onwards, it would omit the previous address.
+            if i write ../search, basically "../" omits one folder preceding search.  -->
+            <!-- html converts space into "%20" in URL since URL does not allow spaces. Each input parameter is passed using & sign-->
+            <!--the disadvantage of using get request is that it appends the URL.
+        the method can be get or post. if i set the method as post, the values wont go into the URL. however, using inspect element,i can see what is being sent into the queries-->
+        <p>Course</p>
+            <input type="text" name="main"> &nbsp;
+            <input type="text" name ="secondary"> &nbsp;
+            <input type="submit">
+            <input type="reset">
+            <input type="button" value="main">
+        </form>
+            <button onclick="location.href='https://www.google.co.in/?client=safari&channel=mac_bm&gws_rd=cr&ei=n-08WcfaIcr-vgSC4oGQAQ';"> Google URL</button>
+        
+        <a type ="button" href="https://www.google.co.in/?client=safari&channel=mac_bm&gws_rd=cr&ei=n-08WcfaIcr-vgSC4oGQAQ">name</a>
+        <!--html does not support arrays, thus, the request for checkboxes is sent as strings and not in the form of arrays.-->
+    </body>
+</html>
